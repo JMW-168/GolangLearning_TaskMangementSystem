@@ -17,8 +17,14 @@ func main() {
 	_, res3 := calc.GetSumAndSub(1, 2)
 	fmt.Println("res3", res3)
 
+	//遞迴調用實作
 	recursiontest(7)
 	recursiontest2(7)
+
+	//遞迴調用練習，費波那契數列實作
+	//給你一個n，求出他的費波那契數列
+	febo := feboNumber(10)
+	fmt.Println("febo=", febo)
 
 }
 
@@ -38,4 +44,12 @@ func recursiontest2(n int) {
 		fmt.Println("n2=", n)
 	}
 
+}
+
+func feboNumber(n int) int {
+	if n == 1 || n == 2 {
+		return 1
+	} else {
+		return feboNumber(n-1) + feboNumber(n-2)
+	}
 }
