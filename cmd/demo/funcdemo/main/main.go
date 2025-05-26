@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/chengjinming/GolangLearning_TaskMangementSystem/cmd/demo/funcdemo/utils/calc"
 )
 
+/*
 func main() {
 	a := 20
 	b := 15
@@ -52,4 +51,27 @@ func feboNumber(n int) int {
 	} else {
 		return feboNumber(n-1) + feboNumber(n-2)
 	}
+}
+*/
+
+//猴子吃桃問題
+//猴子有一堆桃子，每天都吃一半多一個，第10還沒吃的時候，發現剩下一顆，請問他原本有幾顆
+
+//n為天數
+//規律 ： peach(n) = (peach(n+1)＋1) * 2
+
+func peach(n int) int {
+	if n > 10 || n < 1 {
+		fmt.Println("數量不對")
+	}
+	if n == 10 {
+		return 1
+	} else {
+		return (peach(n+1) + 1) * 2
+	}
+
+}
+
+func main() {
+	fmt.Println("猴哥第1天的桃子數量為:", peach(1))
 }
