@@ -16,4 +16,26 @@ func main() {
 
 	_, res3 := calc.GetSumAndSub(1, 2)
 	fmt.Println("res3", res3)
+
+	recursiontest(7)
+	recursiontest2(7)
+
+}
+
+func recursiontest(n int) {
+	if n > 2 {
+		n--
+		recursiontest(n)
+	}
+	fmt.Println("n=", n)
+}
+
+func recursiontest2(n int) {
+	if n > 2 {
+		n--
+		recursiontest2(n)
+	} else {
+		fmt.Println("n2=", n)
+	}
+
 }
