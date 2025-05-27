@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	"time"
 )
 
 func main() {
@@ -19,9 +19,15 @@ func main() {
 			fmt.Printf("字符=%c\n", r[i])
 		}
 	`	*/
-	strArr := strings.Split("hello,world,ok", ",")
-	for i := 0; i < len(strArr); i++ {
-		fmt.Printf("str[%v]=%v\n", i, strArr[i])
-	}
-	fmt.Printf("strArr = %v\n", strArr)
+	/*
+		//依照特定字符分割
+		strArr := strings.Split("hello,world,ok", ",")
+		for i := 0; i < len(strArr); i++ {
+			fmt.Printf("str[%v]=%v\n", i, strArr[i])
+		}
+		fmt.Printf("strArr = %v\n", strArr)
+	*/
+
+	now := time.Now()
+	fmt.Printf("now=%v now Type=%T", now, now)
 }
