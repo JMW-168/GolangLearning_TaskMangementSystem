@@ -27,7 +27,20 @@ func main() {
 		}
 		fmt.Printf("strArr = %v\n", strArr)
 	*/
+	//取得時間
+	//now := time.Now()
+	//fmt.Printf("now=%v now Type=%T", now, now)
 
-	now := time.Now()
-	fmt.Printf("now=%v now Type=%T", now, now)
+	//結合sleep 使用時間常量
+	i := 0
+	for {
+		i++
+		fmt.Println(i)
+		//休眠
+		//time.sleep(time.second)
+		time.Sleep(time.Millisecond * 500)
+		if i == 100 {
+			break
+		}
+	}
 }
